@@ -1,0 +1,599 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Times New Roman', Times, serif;
+  line-height: 1.5;
+  color: #000;
+  background: #f0f0f0;
+}
+
+/* Input Form Styles */
+.input-form {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  padding: 20px;
+}
+
+.form-container {
+  background: white;
+  padding: 40px;
+  border-radius: 10px;
+  box-shadow: 0 10px 40px rgba(0,0,0,0.2);
+  max-width: 600px;
+  width: 100%;
+}
+
+.form-container h1 {
+  font-size: 28px;
+  margin-bottom: 10px;
+  color: #333;
+  text-align: center;
+}
+
+.form-container h2 {
+  font-size: 20px;
+  margin-bottom: 30px;
+  color: #666;
+  text-align: center;
+  font-weight: normal;
+}
+
+.form-section {
+  margin-bottom: 30px;
+}
+
+.form-section h3 {
+  font-size: 18px;
+  margin-bottom: 20px;
+  color: #444;
+}
+
+.input-group {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 15px;
+}
+
+.input-group input {
+  flex: 1;
+  padding: 12px;
+  font-size: 14px;
+  font-family: 'Times New Roman', Times, serif;
+  border: 2px solid #ddd;
+  border-radius: 5px;
+  transition: border-color 0.3s;
+}
+
+.input-group input:focus {
+  outline: none;
+  border-color: #667eea;
+}
+
+.generate-btn {
+  width: 100%;
+  padding: 15px;
+  font-size: 16px;
+  font-weight: bold;
+  font-family: 'Times New Roman', Times, serif;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: transform 0.2s;
+}
+
+.generate-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 5px 20px rgba(102, 126, 234, 0.4);
+}
+
+/* Report Container */
+.report-container {
+  background: #f0f0f0;
+  min-height: 100vh;
+  padding: 20px;
+}
+
+.controls {
+  text-align: center;
+  margin-bottom: 20px;
+  display: flex;
+  gap: 15px;
+  justify-content: center;
+}
+
+.controls button {
+  padding: 12px 24px;
+  font-size: 14px;
+  font-family: 'Times New Roman', Times, serif;
+  background: #667eea;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.controls button:hover {
+  background: #5568d3;
+}
+
+/* Page Styles */
+.page {
+  width: 210mm;
+  min-height: 297mm;
+  padding: 25mm;
+  margin: 0 auto 20px;
+  background: white;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+  position: relative;
+  font-size: 12pt;
+}
+
+.page-header {
+  position: absolute;
+  top: 15mm;
+  left: 25mm;
+  right: 25mm;
+  display: flex;
+  justify-content: space-between;
+  font-size: 10pt;
+  color: #666;
+  padding-bottom: 5px;
+  border-bottom: 1px solid #ccc;
+}
+
+.page-number {
+  font-weight: bold;
+}
+
+/* Title Page */
+.title-page {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.university-header {
+  text-align: center;
+  border-bottom: 3px double #000;
+  padding-bottom: 20px;
+}
+
+.university-header h1 {
+  font-size: 24pt;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.university-header h2 {
+  font-size: 16pt;
+  font-weight: normal;
+}
+
+.title-content {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.main-title {
+  font-size: 28pt;
+  font-weight: bold;
+  text-align: center;
+  margin-bottom: 20px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+.topic-title {
+  font-size: 20pt;
+  text-align: center;
+  margin-bottom: 40px;
+  color: #333;
+}
+
+.course-info {
+  text-align: center;
+  margin-bottom: 40px;
+  font-size: 14pt;
+}
+
+.course-info p {
+  margin-bottom: 8px;
+}
+
+.students-info {
+  margin-bottom: 40px;
+}
+
+.students-info h3 {
+  text-align: center;
+  font-size: 16pt;
+  margin-bottom: 20px;
+}
+
+.student-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 20px;
+}
+
+.student-table th,
+.student-table td {
+  border: 1px solid #000;
+  padding: 10px;
+  text-align: left;
+}
+
+.student-table th {
+  background: #f0f0f0;
+  font-weight: bold;
+}
+
+.course-mapping {
+  border: 2px solid #000;
+  padding: 20px;
+  margin-top: 20px;
+}
+
+.course-mapping h3 {
+  font-size: 14pt;
+  margin-bottom: 15px;
+  text-align: center;
+}
+
+.course-mapping p {
+  margin-bottom: 10px;
+}
+
+.course-mapping ul {
+  margin-left: 30px;
+  margin-top: 10px;
+}
+
+.course-mapping li {
+  margin-bottom: 5px;
+}
+
+.footer-date {
+  text-align: center;
+  border-top: 2px solid #000;
+  padding-top: 15px;
+  font-size: 14pt;
+}
+
+/* Section Titles */
+.section-title {
+  font-size: 18pt;
+  font-weight: bold;
+  margin-top: 40px;
+  margin-bottom: 20px;
+  text-transform: uppercase;
+  border-bottom: 2px solid #000;
+  padding-bottom: 5px;
+}
+
+.page:first-child .section-title,
+.page:nth-child(2) .section-title:first-of-type {
+  margin-top: 0;
+}
+
+.subsection-title {
+  font-size: 14pt;
+  font-weight: bold;
+  margin-top: 20px;
+  margin-bottom: 12px;
+}
+
+.subsubsection-title {
+  font-size: 12pt;
+  font-weight: bold;
+  margin-top: 15px;
+  margin-bottom: 10px;
+  font-style: italic;
+}
+
+/* Table of Contents */
+.toc {
+  margin: 20px 0;
+}
+
+.toc-item {
+  display: flex;
+  justify-content: space-between;
+  padding: 8px 0;
+  border-bottom: 1px dotted #ccc;
+}
+
+.toc-item span:first-child {
+  padding-right: 10px;
+}
+
+/* Text Elements */
+p {
+  margin-bottom: 12px;
+  text-align: justify;
+}
+
+ul, ol {
+  margin-left: 30px;
+  margin-bottom: 12px;
+}
+
+li {
+  margin-bottom: 8px;
+}
+
+strong {
+  font-weight: bold;
+}
+
+em {
+  font-style: italic;
+}
+
+/* Tables */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 15px 0;
+  font-size: 11pt;
+}
+
+table th,
+table td {
+  border: 1px solid #000;
+  padding: 8px;
+  text-align: left;
+}
+
+table th {
+  background: #e0e0e0;
+  font-weight: bold;
+}
+
+/* Special Sections */
+.objectives-list,
+.learning-outcomes,
+.scope-section,
+.exclusions,
+.cia-framework,
+.technology-section,
+.dataflow-description,
+.security-features,
+.implementation-phase,
+.security-control,
+.mitigation-strategies,
+.challenges,
+.recommendations,
+.learning-outcomes-section,
+.discussion-section,
+.references,
+.appendix {
+  margin: 15px 0;
+}
+
+.objective-item,
+.cia-item,
+.strategy-item {
+  margin-bottom: 15px;
+  padding: 10px;
+  background: #f9f9f9;
+  border-left: 3px solid #667eea;
+}
+
+.phase-content {
+  margin-left: 20px;
+}
+
+.implementation-phase h3 {
+  font-size: 13pt;
+  font-weight: bold;
+  margin-top: 15px;
+  margin-bottom: 10px;
+  color: #333;
+}
+
+/* Code Blocks */
+.code-block {
+  background: #f5f5f5;
+  border: 1px solid #ccc;
+  border-left: 4px solid #667eea;
+  padding: 12px;
+  margin: 15px 0;
+  font-family: 'Courier New', monospace;
+  font-size: 9pt;
+  overflow-x: auto;
+}
+
+.code-block pre {
+  margin: 0;
+  white-space: pre-wrap;
+  word-wrap: break-word;
+}
+
+/* Diagrams */
+.diagram-container {
+  margin: 20px 0;
+  text-align: center;
+}
+
+.architecture-diagram,
+.workflow-diagram,
+.chart {
+  max-width: 100%;
+  height: auto;
+  border: 1px solid #ccc;
+  background: #fff;
+}
+
+.diagram-caption {
+  font-size: 10pt;
+  margin-top: 10px;
+  font-style: italic;
+  text-align: center;
+}
+
+/* Special Elements */
+.observation {
+  background: #fff9e6;
+  border-left: 4px solid #ffc107;
+  padding: 12px;
+  margin: 15px 0;
+  font-style: italic;
+}
+
+.security-tests {
+  margin: 20px 0;
+}
+
+.security-tests h3 {
+  font-size: 12pt;
+  font-weight: bold;
+  margin-bottom: 12px;
+}
+
+.outcomes-list {
+  list-style-type: disc;
+  margin-left: 30px;
+}
+
+.outcomes-list li {
+  margin-bottom: 10px;
+}
+
+/* References */
+.reference-list {
+  list-style-position: outside;
+  margin-left: 25px;
+}
+
+.reference-list li {
+  margin-bottom: 12px;
+  text-align: justify;
+}
+
+.references h3 {
+  font-size: 14pt;
+  font-weight: bold;
+  margin-top: 25px;
+  margin-bottom: 15px;
+}
+
+/* Appendix */
+.acronyms-table table {
+  font-size: 10pt;
+}
+
+.acronyms-table td:first-child {
+  width: 30%;
+  font-weight: bold;
+}
+
+.declaration {
+  margin-top: 30px;
+  border: 2px solid #000;
+  padding: 20px;
+}
+
+.declaration h3 {
+  font-size: 14pt;
+  margin-bottom: 15px;
+  text-align: center;
+}
+
+.signature-section {
+  margin: 30px 0;
+}
+
+.signature-line {
+  margin-top: 40px;
+}
+
+.end-mark {
+  text-align: center;
+  margin-top: 40px;
+  font-weight: bold;
+  font-size: 14pt;
+}
+
+/* Print Styles */
+@media print {
+  body {
+    background: white;
+  }
+
+  .no-print {
+    display: none !important;
+  }
+
+  .report-container {
+    padding: 0;
+    background: white;
+  }
+
+  .page {
+    width: 210mm;
+    height: 297mm;
+    margin: 0;
+    padding: 25mm;
+    box-shadow: none;
+    page-break-after: always;
+    page-break-inside: avoid;
+  }
+
+  .page:last-child {
+    page-break-after: auto;
+  }
+
+  @page {
+    size: A4;
+    margin: 0;
+  }
+}
+
+/* Responsive Design */
+@media screen and (max-width: 900px) {
+  .page {
+    width: 100%;
+    min-height: auto;
+    padding: 20px;
+    margin-bottom: 10px;
+  }
+
+  .page-header {
+    position: static;
+    margin-bottom: 20px;
+  }
+
+  .main-title {
+    font-size: 22pt;
+  }
+
+  .topic-title {
+    font-size: 16pt;
+  }
+
+  .section-title {
+    font-size: 16pt;
+  }
+
+  .input-group {
+    flex-direction: column;
+  }
+
+  .form-container {
+    padding: 25px;
+  }
+}
